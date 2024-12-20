@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>I Love You</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      font-family: 'Roboto', sans-serif;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    h1 {
+      font-size: 4rem;
+      color: white;
+      text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+      margin: 20px;
+      font-family: 'Great Vibes', cursive;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      padding: 20px;
+    }
+
+    .message {
+      font-size: 1.5rem;
+      color: white;
+      margin-top: 10px;
+      text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 15px 30px;
+      background-color: white;
+      color: #ff6b81;
+      border: none;
+      border-radius: 25px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      transform: scale(1.1);
+      background-color: #ff6b81;
+      color: white;
+    }
+
+    .heart {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      background-color: rgba(255, 255, 255, 0.5);
+      border-radius: 50%;
+      animation: float 6s ease-in-out infinite;
+    }
+
+    .heart::before,
+    .heart::after {
+      content: '';
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      background-color: rgba(255, 255, 255, 0.5);
+      border-radius: 50%;
+    }
+
+    .heart::before {
+      top: -50px;
+      left: 0;
+    }
+
+    .heart::after {
+      left: 50px;
+      top: 0;
+    }
+
+    .heart:nth-child(1) {
+      left: 10%;
+      animation-delay: 0s;
+    }
+
+    .heart:nth-child(2) {
+      left: 30%;
+      animation-delay: 2s;
+    }
+
+    .heart:nth-child(3) {
+      left: 50%;
+      animation-delay: 4s;
+    }
+
+    .heart:nth-child(4) {
+      left: 70%;
+      animation-delay: 6s;
+    }
+
+    .heart:nth-child(5) {
+      left: 90%;
+      animation-delay: 8s;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+      }
+      50% {
+        transform: translateY(-200px) scale(1.2);
+        opacity: 0.7;
+      }
+      100% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>I ❤️ You Babi, bati na tayo da.</h1>
+    <p class="message">Mag papasko na po ayoko na ganto huhu</p>
+    <button onclick="alert('Message me po if you saw this! 💖')">Click Me</button>
+  </div>
+
+  <!-- Floating Hearts -->
+  <div class="heart"></div>
+  <div class="heart"></div>
+  <div class="heart"></div>
+  <div class="heart"></div>
+  <div class="heart"></div>
+</body>
+</html>
